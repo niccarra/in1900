@@ -34,7 +34,8 @@ C = 9
 
 start = 0
 end = 48
-t_samples = np.linspace(start, end, num = 12,)
+num_samples = 12
+t_samples = np.linspace(start, end, num = num_samples + 1)
 N_samples = population_growth(50000, 9, 0.2, t_samples)
 
 table = list(zip(t_samples, N_samples))
