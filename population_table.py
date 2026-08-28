@@ -40,3 +40,12 @@ N_samples = population_growth(50000, 9, 0.2, t_samples)
 table = list(zip(t_samples, N_samples))
 tabulated_table = tabulate(table, headers=["Time (hours)", "Population"])
 print(tabulated_table)
+
+'''Problemformulering ber oss å bruke en for-løkke. La oss gjøre det da'''
+N_samples = []
+for t in t_samples:
+    N_samples.append(population_growth(50000, 9, 0.2, t))
+print("Time (hours) | Population")
+print("")
+for i in range(len(t_samples)):
+    print(f"{t_samples[i]:12.2f} | {N_samples[i]:8.2f}")    
