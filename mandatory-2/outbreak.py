@@ -10,7 +10,7 @@ def test_R_to_beta():
    # Ifølge oppgaven, med default parameterverdier er R = 4.7 * beta
    R = 4.7
    beta = R_to_beta(R)
-   np.testing.assert_almost_equal(beta, 1)
+   np.testing.assert_allclose(beta, 1)
 
 # problem 3.b
 class LockdownBeta:
